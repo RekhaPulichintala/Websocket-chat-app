@@ -1,1 +1,23 @@
 # Websocket-chat-app
+
+To GET this Chat Application started
+
+Clone the git repo.
+
+Navigate to websocketclient folder.
+
+run npm install websocket
+
+npm install react
+
+npm install reach-dom
+
+npm install react-scripts
+
+npm install antd
+
+Befor running npm start, make sure you clone the websocket-server repo from 
+
+https://github.com/RekhaPulichintala/websocket-server
+
+npm start.

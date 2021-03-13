@@ -3,19 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "antd": "^4.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
-    "websocket": "^1.0.31"
+    "antd": "^4.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^4.0.3",
+    "websocket": "^1.0.33"
   },
   "browserslist": {
     "production": [
