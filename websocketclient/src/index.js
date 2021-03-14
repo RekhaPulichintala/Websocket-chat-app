@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import { w3cwebsocket as W3CWebSocket } from "websocket";
-import { Card, Avatar, Input, Typography } from 'antd';
+import { Card, Avatar, Input,Space, Button, Typography } from 'antd';
 import 'antd/dist/antd.css';
 import './index.css'
 
@@ -9,7 +9,7 @@ const { Search } = Input;
 const { Text } = Typography;
 const { Meta } = Card;
 
-const client = new W3CWebSocket('ws://127.0.0.1:8000');
+const client = new W3CWebSocket('ws://localhost:8000');
 
 export default class App extends Component {
 
@@ -17,6 +17,15 @@ export default class App extends Component {
     userName: '',
     isLoggedIn: false,
     messages: []
+  }
+
+  handleButtonClick = () => {
+    if (this.state.userName && this.state.passWord) {
+      this.setState({isLoggedIn: true})
+    }
+    else {
+      return;
+    }
   }
 
   onButtonClicked = (value) => {
@@ -80,14 +89,21 @@ export default class App extends Component {
           </div> 
         </div>
         :
-        <div style={{ padding: '200px 40px' }}>
-          <Search
+        <Space direction="vertical" style={{ padding: '200px 40px' }}>
+          <Input
             placeholder="Enter Username"
-            enterButton="Login"
             size="large"
-            onSearch={value => this.setState({ isLoggedIn: true, userName: value })}
+            onChange={(e) => this.setState({ userName: e.target.value })}
           />
-        </div>
+          <Input.Password
+            placeholder="Enter Password"
+            size="large"
+            onChange={(e) => this.setState({ passWord: e.target.value})}
+          />
+          <Button
+            type="primary"
+            onClick={()=>{this.handleButtonClick()}}>Login</Button>
+        </Space>
       }
       </div>
     )
