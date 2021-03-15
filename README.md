@@ -21,3 +21,7 @@ Befor running npm start, make sure you clone the websocket-server repo from
 https://github.com/RekhaPulichintala/websocket-server
 
 npm start.
+
+Once you  starte the server you should be able to login and send messages.
+
+To chat real time you can open 2 instans of the page and login with 2 users and chat realtime.
